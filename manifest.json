@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "QCP",
+    "version": "1.0",
+    "description": "Store and quickly copy frequently used text snippets.",
+    "permissions": ["storage"],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  

@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 200px;
+    padding: 10px;
+  }
+  
+  #key, #snippet {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #snippet {
+    height: 60px;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  #snippets {
+    margin-top: 10px;
+  }
+  
+  .snippet-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .snippet-item div {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .snippet-item button {
+    width: auto;
+  }
+  

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quick Copy-Paste</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      width: 400px; /* Adjust this value to make the popup wider */
+    }
+  </style>
+</head>
+<body class="p-4 bg-gray-100">
+  <h1 class="text-xl font-bold mb-4">Quick Copy-Paste</h1>
+  <input id="key" placeholder="Enter key..." class="w-full mb-2 p-2 border border-gray-300 rounded"/>
+  <textarea id="snippet" placeholder="Enter your text here..." class="w-full mb-2 p-2 border border-gray-300 rounded h-24"></textarea>
+  <button id="save" class="w-full bg-blue-500 text-white py-2 rounded mb-4">Save</button>
+  <div id="snippets">
+    <!-- Saved snippets will be displayed here -->
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
