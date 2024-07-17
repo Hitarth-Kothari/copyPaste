@@ -1,20 +1,35 @@
 body {
     font-family: Arial, sans-serif;
-    width: 200px;
+    width: 400px; /* Adjust this value to make the popup wider */
+    background-color: #1e1e1e; /* Dark background */
+    color: #ffffff; /* Light text */
     padding: 10px;
   }
   
-  #key, #snippet {
+  input, textarea {
     width: 100%;
     margin-bottom: 10px;
+    background-color: #333333; /* Dark input background */
+    color: #ffffff; /* Light text */
+    border: 1px solid #444444; /* Darker border */
+    padding: 5px;
   }
   
-  #snippet {
+  textarea {
     height: 60px;
   }
   
   button {
     width: 100%;
+    background-color: #444444; /* Dark button background */
+    color: #ffffff; /* Light text */
+    border: 1px solid #555555; /* Darker border */
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555555; /* Lighter button background on hover */
   }
   
   #snippets {
@@ -25,9 +40,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f1f1f1;
+    background-color: #333333; /* Dark snippet background */
     padding: 5px;
     margin-bottom: 5px;
+    border: 1px solid #444444; /* Darker border */
   }
   
   .snippet-item div {
@@ -37,5 +53,13 @@ body {
   
   .snippet-item button {
     width: auto;
+    background-color: #555555; /* Dark button background */
+    color: #ffffff; /* Light text */
+    border: 1px solid #666666; /* Darker border */
+    padding: 2px 5px;
+  }
+  
+  .snippet-item button:hover {
+    background-color: #666666; /* Lighter button background on hover */
   }
   
