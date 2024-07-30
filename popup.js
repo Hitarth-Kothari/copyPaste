@@ -40,20 +40,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add snippet to DOM
   function addSnippetToDOM(key, snippet) {
     const snippetElement = document.createElement('div');
-    snippetElement.className = 'flex justify-between items-center bg-gray-800 text-white p-2 mb-2 border border-gray-600 rounded-lg shadow cursor-pointer';
+    snippetElement.className = 'snippet-item flex justify-between items-center bg-gray-800 text-white p-2 mb-2 border border-gray-600 rounded-lg shadow relative';
 
     const textElement = document.createElement('span');
     textElement.textContent = key;
     textElement.className = 'flex-grow';
 
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'flex gap-2';
-
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
-    deleteButton.className = 'bg-red-600 text-white px-2 py-1 rounded-lg hover:bg-red-700';
-    deleteButton.addEventListener('click', function(event) {
-      event.stopPropagation();  // Prevent the container click event from firing
+    const deleteStrip = document.createElement('div');
+    deleteStrip.className = 'absolute top-0 right-0 h-full w-2 bg-red-600 hover:bg-red-700 cursor-pointer rounded-r-2xl';
+    deleteStrip.addEventListener('click', function(event) {
+      event.stopPropagation();  // Prevent any other click event
       chrome.storage.local.get(['snippets'], function(result) {
         const snippets = result.snippets || {};
         delete snippets[key];
@@ -64,8 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     snippetElement.appendChild(textElement);
-    buttonContainer.appendChild(deleteButton);
-    snippetElement.appendChild(buttonContainer);
+    snippetElement.appendChild(deleteStrip);
 
     // Copy snippet on container click
     snippetElement.addEventListener('click', function() {

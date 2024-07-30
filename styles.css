@@ -1,65 +1,79 @@
+/* General styling */
 body {
-    font-family: Arial, sans-serif;
-    width: 400px; /* Adjust this value to make the popup wider */
-    background-color: #1e1e1e; /* Dark background */
-    color: #ffffff; /* Light text */
-    padding: 10px;
-  }
-  
-  input, textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    background-color: #333333; /* Dark input background */
-    color: #ffffff; /* Light text */
-    border: 1px solid #444444; /* Darker border */
-    padding: 5px;
-  }
-  
-  textarea {
-    height: 60px;
-  }
-  
-  button {
-    width: 100%;
-    background-color: #444444; /* Dark button background */
-    color: #ffffff; /* Light text */
-    border: 1px solid #555555; /* Darker border */
-    padding: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #555555; /* Lighter button background on hover */
-  }
-  
-  #snippets {
-    margin-top: 10px;
-  }
-  
-  .snippet-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333333; /* Dark snippet background */
-    padding: 5px;
-    margin-bottom: 5px;
-    border: 1px solid #444444; /* Darker border */
-  }
-  
-  .snippet-item div {
-    display: flex;
-    gap: 5px;
-  }
-  
-  .snippet-item button {
-    width: auto;
-    background-color: #555555; /* Dark button background */
-    color: #ffffff; /* Light text */
-    border: 1px solid #666666; /* Darker border */
-    padding: 2px 5px;
-  }
-  
-  .snippet-item button:hover {
-    background-color: #666666; /* Lighter button background on hover */
-  }
-  
+  font-family: Arial, sans-serif;
+  width: 400px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 10px;
+}
+
+input, textarea, button {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #444444;
+  padding: 5px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555555;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333333;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #444444;
+}
+
+.book-item div {
+  display: flex;
+  gap: 5px;
+}
+
+.book-item button {
+  width: auto;
+  background-color: #555555;
+  border: 1px solid #666666;
+  padding: 2px 5px;
+}
+
+.book-item button:hover {
+  background-color: #666666;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#books-list::-webkit-scrollbar {
+display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#books-list {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+
+/* Ensure proper overflow for books list */
+#books-list {
+max-height: 300px; /* or any height you prefer */
+overflow-y: scroll;
+}
+
+.snippet-item {
+  -webkit-user-select: none; /* Chrome, Safari, Opera */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10+ */
+  user-select: none;         /* Standard */
+}
+
+.snippet-item:hover {
+  background-color: #2b3a4e; /* Bluish-grey color */
+}
